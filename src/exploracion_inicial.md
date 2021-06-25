@@ -19,7 +19,7 @@ library(rethinking)
 Carga de datos:
 
 ``` r
-df <- readxl::read_xlsx("../data/Base Elecciones Covid-19_2020-2021.xlsx",
+df <- readxl::read_xlsx("data/Base Elecciones Covid-19_2020-2021.xlsx",
     skip = 1,
     col_names = c(
         "pais",
@@ -56,7 +56,7 @@ df %>%
     theme(legend.position = "bottom")
 ```
 
-![](/workspaces/elecciones-oficialismo-cenital/rendered_files/exploracion_inicial_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+![](exploracion_inicial_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
 Ya que estamos, V-Dem indexes por continente:
 
@@ -74,7 +74,7 @@ df %>%
     theme(legend.position = "bottom")
 ```
 
-![](/workspaces/elecciones-oficialismo-cenital/rendered_files/exploracion_inicial_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+![](exploracion_inicial_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
 # Modelado
 
@@ -115,7 +115,7 @@ post %>%
     geom_density2d()
 ```
 
-![](/workspaces/elecciones-oficialismo-cenital/rendered_files/exploracion_inicial_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+![](exploracion_inicial_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
 
 Sampleo algunos coeficientes de la distribución posterior, y grafico las
 curvas implicadas:
@@ -148,7 +148,7 @@ sample(1:nrow(post), size = n_samples) %>%
     )
 ```
 
-![](/workspaces/elecciones-oficialismo-cenital/rendered_files/exploracion_inicial_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+![](exploracion_inicial_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
 
 Se ve que la tendencia decreciente es clara, aunque todavía hay bastante
 incertidumbre respecto a la forma de la curva.

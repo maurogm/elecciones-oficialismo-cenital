@@ -22,7 +22,7 @@ library(data.table)
 library(rethinking)
 
 #' Carga de datos:
-df <- readxl::read_xlsx("../data/Base Elecciones Covid-19_2020-2021.xlsx",
+df <- readxl::read_xlsx("data/Base Elecciones Covid-19_2020-2021.xlsx",
     skip = 1,
     col_names = c(
         "pais",
